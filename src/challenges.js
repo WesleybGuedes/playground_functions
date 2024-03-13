@@ -1,11 +1,12 @@
-const menu = require('./mcDonalds');
-const guestsDatabase = require('./data.json');
+// const menu = require('./mcDonalds');
+// const guestsDatabase = require('./data.json');
 
 // =================================================
 // PARTE 1
 // =================================================
 
 // Requisito 1 - Crie uma função que divida uma frase
+const splitSentence = (phrase) => phrase.split(' ');
 
 // Requisito 2 - Crie uma função que calcula a quantidade de pontos em um campeonato de futebol
 
