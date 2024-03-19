@@ -21,6 +21,17 @@ const addMusics = (artistName, musicName, musicTime) => playlist
 // =================================================
 
 // Requisito 4 - Crie uma função que retorna o produto mais caro de acordo com uma categoria
+const moreExpensive = (data, category) => {
+  let productsName = '';
+  let productsPrice = data[category][0].price;
+  for (let i = 0; i < data[category].length; i += 1) {
+    if (data[category][i].price >= productsPrice) {
+      productsName = data[category][i].name;
+      productsPrice = data[category][i].price;
+    }
+  }
+  return `O produto mais caro é: ${productsName}, que custa: R$${productsPrice.toFixed(2)}.`;
+};
 
 // Requisito 5 - Crie uma função que verifica se um determinado item já existe
 
