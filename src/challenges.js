@@ -12,8 +12,9 @@ const splitSentence = (phrase) => phrase.split(' ');
 const footballPoints = (wins, ties) => (wins * 3) + ties;
 
 // Requisito 3 - Crie uma função que adiciona músicas em uma playlist
+let playlist = [];
 const addMusics = (artistName, musicName, musicTime) => playlist
-  .push({ artistName, musicName, musicTime });
+  .push({ artist: artistName, music: musicName, musicTime });
 
 // =================================================
 // PARTE 2
