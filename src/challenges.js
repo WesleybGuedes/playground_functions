@@ -6,11 +6,18 @@
 // =================================================
 
 // Requisito 1 - Crie uma função que divida uma frase
-const splitSentence = (phrase) => phrase.split(' ');
-
+function splitSentence(phrase) {
+  let splitPhrase = phrase.split(' ');
+  return splitPhrase;
+}
 // Requisito 2 - Crie uma função que calcula a quantidade de pontos em um campeonato de futebol
-
+const footballPoints = (wins, ties) => {
+  let teamPoints = (wins * 3) + ties;
+  return teamPoints;
+};
 // Requisito 3 - Crie uma função que adiciona músicas em uma playlist
+const addMusics = (artistName, musicName, musicTime) => playlist
+  .push({ artistName, musicName, musicTime });
 
 // =================================================
 // PARTE 2
