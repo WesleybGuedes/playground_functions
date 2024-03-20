@@ -59,18 +59,16 @@ const addNewItem = (data, category, item, ...infosNewItem) => {
 };
 // Requisito 7 - Crie uma função que conta a quantidade de pessoas por gênero
 const counterGender = (data) => {
-  let countMale = 0;
-  let countFemale = 0;
+  gender = {
+    male: 0,
+    female: 0,
+  };
   data.guests.forEach((person) => {
     if (person.gender === 'male') {
-      countMale += 1;
+      gender.male += 1;
     } else {
-      countFemale += 1;
+      gender.female += 1;
     }
-    gender = {
-      male: countMale,
-      female: countFemale,
-    };
   });
   return gender;
 };
