@@ -101,12 +101,9 @@ const averageAge = (arrayNums) => {
 // mapCountries Suport
 const mapCountries = (data) => {
   const countries = [];
-  data.guests.forEach((person) => {
-    if (!countries.includes(person.country)) {
-      countries.push(person.country);
-    }
-  });
-  return countries.sort();
+  data.guests.map((person) => countries.push(person.country));
+  const uniqueCountries = [...new Set(countries)];
+  return uniqueCountries.sort();
 };
 
 // Requisito 10 - Crie um função que gera um relatório
