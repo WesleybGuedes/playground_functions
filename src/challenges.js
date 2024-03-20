@@ -102,8 +102,8 @@ const averageAge = (arrayNums) => {
 const mapCountries = (data) => {
   const countries = [];
   data.guests.forEach((person) => {
-    if (!countries.includes(person.address.country)) {
-      countries.push(person.address.country);
+    if (!countries.includes(person.country)) {
+      countries.push(person.country);
     }
   });
   return countries.sort();
