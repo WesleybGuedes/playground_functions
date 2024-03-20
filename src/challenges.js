@@ -61,7 +61,7 @@ const addNewItem = (data, category, item, ...infosNewItem) => {
 const counterGender = (data) => {
   let countMale = 0;
   let countFemale = 0;
-  data.guests.filter((person) => {
+  data.guests.forEach((person) => {
     if (person.gender === 'male') {
       countMale += 1;
     } else {
