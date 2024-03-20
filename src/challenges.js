@@ -88,7 +88,36 @@ const changePicture = (data, link) => {
   return data.guests;
 };
 
+// AvgFunction Suport
+const averageAge = (arrayNums) => {
+  if (arrayNums.length === 0) {
+    return 0;
+  }
+  const sum = arrayNums.reduce((total, num) => total + num, 0);
+  const media = sum / arrayNums.length;
+  return media;
+};
+
+// mapCountries Suport
+const mapCountries = (data) => {
+  const countries = [];
+  data.guests.forEach((person) => {
+    if (!countries.includes(person.address.country)) {
+      countries.push(person.address.country);
+    }
+  });
+  return countries.sort();
+};
+
 // Requisito 10 - Crie um função que gera um relatório
+const generateReport = (data) => {
+  const report = {
+    totalGuests: data.guests.length,
+    totalGender: counterGender(data),
+    avgAge: parseFloat(averageAge(data.guests.map((person) => person.age)).toFixed(2)),
+    countries: mapCountries(data) };
+  return report;
+};
 
 // Não modifique as linhas abaixo
 module.exports = {
