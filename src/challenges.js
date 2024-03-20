@@ -78,8 +78,15 @@ const counterGender = (data) => {
 // =================================================
 
 // Requisito 8 - Crie uma função que retorna os elementos de um determinado estado
+const filterState = (data, state) => data.guests.filter((person) => person.address.state === state);
 
 // Requisito 9 - Crie uma função que altera a propriedade `picture`
+const changePicture = (data, link) => {
+  for (let i = 0; i < data.guests.length; i += 1) {
+    data.guests[i].picture = link;
+  }
+  return data.guests;
+};
 
 // Requisito 10 - Crie um função que gera um relatório
 
